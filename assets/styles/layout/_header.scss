@@ -1,0 +1,26 @@
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    &__logo {
+        width: 180px;
+        height: auto;
+
+        @include tabletLandscape {
+            width: 160px;
+        }
+    }
+
+    &__nav-link {
+        margin-right: 50px;
+        padding: 26px 0 25px;
+        font-weight: bold;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+    }
+}

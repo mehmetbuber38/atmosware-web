@@ -1,0 +1,72 @@
+@import "../mixins/queries";
+.entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tabletLandscape {
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        margin-bottom: 25px;
+
+        @include tabletLandscape {
+            width: 50%;
+        }
+
+        .c-btn {
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+
+    &__left-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $white;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        @include tabletLandscape {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+    }
+    &__left-paragraph {
+        font-size: 16px;
+        color: $white;
+
+        @include tabletLandscape {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__right {
+        @include tabletLandscape {
+            width: 50%;
+        }
+
+        .c-btn {
+            width: 100%;
+
+            @media (min-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+
+    &__right-img {
+        object-fit: contain;
+        border-radius: 20px;
+        width: 100%;
+        margin-bottom: 25px;
+
+        @include tabletLandscape {
+            margin-bottom: 0;
+        }
+    }
+}

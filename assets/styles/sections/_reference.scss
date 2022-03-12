@@ -1,0 +1,56 @@
+.reference {
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    font-weight: bold;
+    padding-bottom: 230px;
+
+    .title {
+        margin-top: 70px;
+
+        @include tabletLandscape {
+            margin-top: 150px;
+        }
+    }
+
+    &__card {
+        display: block;
+        padding: 23px 40px;
+        object-fit: contain;
+        border-radius: 10px;
+        box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.4);
+        color: $white;
+        text-decoration: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__card-list {
+        display: flex;
+        align-items: center;
+        overflow: auto;
+        margin-top: 30px;
+
+        @include tabletLandscape {
+            overflow: visible;
+            margin-top: 50px;
+        }
+
+        .row {
+            flex-wrap: nowrap;
+
+            @include tabletLandscape {
+                flex-wrap: wrap;
+            }
+        }
+
+        .reference__card {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}

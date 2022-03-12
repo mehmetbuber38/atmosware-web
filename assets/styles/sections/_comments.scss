@@ -1,0 +1,74 @@
+.comments {
+    background: $white;
+    padding: 30px 0;
+
+    @include tabletLandscape {
+        padding: 100px 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 250px;
+    }
+
+    &__bio {
+        text-align: center;
+        align-items: center;
+        padding: 45px 20px 20px;
+        border-radius: 10px;
+        background-color: $white;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px 0 rgba(142, 159, 173, 0.2);
+
+        @include tabletLandscape {
+            height: 352px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__bio-avatar {
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 5px 15px 0 rgba(142, 159, 173, 0.2);
+        margin-top: -110px;
+    }
+
+    &__bio-name {
+        margin-bottom: 1px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+
+        @include tabletLandscape {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bio-mission {
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+
+    &__bio-paragraph {
+        @include tabletLandscape {
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    &__cards {
+        flex-wrap: nowrap !important;
+        overflow: auto;
+        padding: 35px 0;
+
+        @include tabletLandscape {
+            padding: 0;
+            overflow: visible;
+            flex-wrap: wrap !important;
+        }
+    }
+}

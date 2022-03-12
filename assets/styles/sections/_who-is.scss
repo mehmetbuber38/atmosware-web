@@ -1,0 +1,48 @@
+@import "../mixins/queries";
+
+.who-is {
+    background: url("/assets/img/background-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 183px 0 100px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    .title {
+        margin: 29px 0 30px;
+        color: #1c1f25;
+    }
+
+    &__bio {
+        height: 375px;
+        margin: 30px 0;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #0d3f5c;
+
+        .row {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__bio-h6 {
+        height: 42px;
+        margin: 20px 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: $white;
+    }
+
+    &__bio-paragraph {
+        height: 200px;
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        color: $mediumGray;
+    }
+}
