@@ -134,7 +134,7 @@ table {
 }
 
 body {
-  font-family: "Signika", sans-serif;
+  font-family: "Signika", sans-serif !important;
 }
 
 @media (min-width: 1200px) {
