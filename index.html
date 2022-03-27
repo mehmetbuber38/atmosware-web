@@ -18,7 +18,7 @@
       <div class="header__inner">
         <div class="header__top">
           <a href="javascript:" id="hamburgerMenu" class="header__menu-button">
-            <img src="/assets/img/hamburger-menu.svg" alt="Menüyü Açar" id="hamburgerMenuIcon">
+            <img src="assets/img/hamburger-menu.svg" alt="Menüyü Açar" id="hamburgerMenuIcon">
           </a>
 
           <a href="/" class="header__logo-link">
@@ -401,10 +401,10 @@
   <script>
     function toggleMenuIcon() {
       let initialImg = document.getElementById("hamburgerMenuIcon").src;
-      let srcTest = initialImg.includes('/assets/img/hamburger-menu.svg');
+      let srcTest = initialImg.includes('assets/img/hamburger-menu.svg');
       let newImg = {
-        'true': '/assets/img/icons-close.png',
-        'false': '/assets/img/hamburger-menu.svg'
+        'true': 'assets/img/icons-close.png',
+        'false': 'assets/img/hamburger-menu.svg'
       }[srcTest];
 
       return newImg;
