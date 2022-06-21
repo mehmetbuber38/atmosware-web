@@ -1,6 +1,6 @@
 # atmosware
 
-Goygoy şirketi için yapılmış ödevdir.
+X şirketi için yapılmış ödevdir.
 
 Projede kullandığım teknikler.
 
@@ -11,6 +11,8 @@ SCSS'de component'leri bir klasör altında topladım ve global style.scss'de ç
 Aynı şekilde layout, mixins, pages, sections bölümlerinide ayırdım ve sık kullanılan renkleri variables olarak atadım.
 
 SCSS'de metodoloji olarak BEM'e uymaya çalıştım.
+
+CSS ile scroll snap atayarak slider kullanmadan js ile verilen hissiyatı verdim performans için oldukça faydalı.
 
 Projede grid yapısı için bootstrap 4 kullandım.
 
