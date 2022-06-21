@@ -12,7 +12,7 @@
         margin-top: 250px;
     }
 
-    &__bio {
+    &__box {
         text-align: center;
         align-items: center;
         padding: 45px 20px 20px;
@@ -27,31 +27,23 @@
         }
     }
 
-    &__bio-avatar {
+    &__avatar {
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 5px 15px 0 rgba(142, 159, 173, 0.2);
         margin-top: -110px;
     }
 
-    &__bio-name {
+    &__name {
         margin-bottom: 1px;
     }
 
-    .title {
-        margin-bottom: 50px;
-
-        @include tabletLandscape {
-            margin-bottom: 0;
-        }
-    }
-
-    &__bio-mission {
+    &__mission {
         margin-bottom: 20px;
         font-weight: normal;
     }
 
-    &__bio-paragraph {
+    &__paragraph {
         @include tabletLandscape {
             display: -webkit-box;
             -webkit-line-clamp: 6;
@@ -64,11 +56,25 @@
         flex-wrap: nowrap !important;
         overflow: auto;
         padding: 35px 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
 
         @include tabletLandscape {
             padding: 0;
             overflow: visible;
             flex-wrap: wrap !important;
+        }
+
+        > [class^="col-"]{ 
+            scroll-snap-align: start;
+        }
+    }
+
+    .title {
+        margin-bottom: 50px;
+
+        @include tabletLandscape {
+            margin-bottom: 0;
         }
     }
 }

@@ -158,6 +158,10 @@ body {
   }
 }
 
+.homepage .wrapper {
+  padding-top: 70px;
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,7 +214,7 @@ body {
   text-decoration: none;
 }
 
-.header__nav-link:focus {
+.header__nav-link:hover, .header__nav-link:focus {
   text-decoration: none;
   color: #ffffff;
   opacity: 0.7;
@@ -229,7 +233,7 @@ body {
 }
 
 .header-menu--active {
-  background: url("../img/background-mobile.png") no-repeat;
+  background: url("../img/background-mobile.png") no-repeat !important;
   background-size: cover;
   position: fixed;
   top: 0;
@@ -280,6 +284,15 @@ body {
   .header__menu-button {
     display: none;
   }
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(19, 19, 19, 0.8);
 }
 
 .footer {
@@ -531,6 +544,9 @@ body {
           align-items: center;
   overflow: auto;
   margin-top: 30px;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (min-width: 1024px) {
@@ -550,6 +566,10 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.reference__card-list .row > [class^="col-"] {
+  scroll-snap-align: start;
 }
 
 .reference__card-list .reference__card:not(:last-child) {
@@ -573,11 +593,6 @@ body {
   margin-top: 100px;
 }
 
-.who-is .title {
-  margin: 29px 0 30px;
-  color: #1c1f25;
-}
-
 .who-is__bio {
   height: 375px;
   margin: 30px 0;
@@ -591,7 +606,11 @@ body {
       flex-wrap: wrap;
 }
 
-.who-is__bio-h6 {
+.who-is__bio-logo {
+  max-height: 55px;
+}
+
+.who-is__bio-heading {
   height: 42px;
   margin: 20px 0;
   font-size: 18px;
@@ -606,6 +625,11 @@ body {
   font-weight: 500;
   line-height: 1.43;
   color: #c2c2c2;
+}
+
+.who-is .title {
+  margin: 29px 0 30px;
+  color: #1c1f25;
 }
 
 .comments {
@@ -629,7 +653,7 @@ body {
   margin-top: 250px;
 }
 
-.comments__bio {
+.comments__box {
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -643,13 +667,13 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .comments__bio {
+  .comments__box {
     height: 352px;
     margin-bottom: 40px;
   }
 }
 
-.comments__bio-avatar {
+.comments__avatar {
   border-radius: 50%;
   overflow: hidden;
   -webkit-box-shadow: 0 5px 15px 0 rgba(142, 159, 173, 0.2);
@@ -657,27 +681,17 @@ body {
   margin-top: -110px;
 }
 
-.comments__bio-name {
+.comments__name {
   margin-bottom: 1px;
 }
 
-.comments .title {
-  margin-bottom: 50px;
-}
-
-@media (min-width: 1024px) {
-  .comments .title {
-    margin-bottom: 0;
-  }
-}
-
-.comments__bio-mission {
+.comments__mission {
   margin-bottom: 20px;
   font-weight: normal;
 }
 
 @media (min-width: 1024px) {
-  .comments__bio-paragraph {
+  .comments__paragraph {
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
@@ -690,6 +704,9 @@ body {
       flex-wrap: nowrap !important;
   overflow: auto;
   padding: 35px 0;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (min-width: 1024px) {
@@ -698,6 +715,20 @@ body {
     overflow: visible;
     -ms-flex-wrap: wrap !important;
         flex-wrap: wrap !important;
+  }
+}
+
+.comments__cards > [class^="col-"] {
+  scroll-snap-align: start;
+}
+
+.comments .title {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .comments .title {
+    margin-bottom: 0;
   }
 }
 
@@ -786,5 +817,6 @@ body {
   border: solid 1px #c2c2c2;
   background-color: #ffffff;
   overflow: auto;
+  resize: none;
 }
 /*# sourceMappingURL=style.css.map */

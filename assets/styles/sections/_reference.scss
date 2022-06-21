@@ -33,6 +33,8 @@
         align-items: center;
         overflow: auto;
         margin-top: 30px;
+        scroll-snap-type: x mandatory;
+       -webkit-overflow-scrolling: touch;
 
         @include tabletLandscape {
             overflow: visible;
@@ -44,6 +46,10 @@
 
             @include tabletLandscape {
                 flex-wrap: wrap;
+            }
+
+            > [class^="col-"]{ 
+                scroll-snap-align: start;
             }
         }
 
